@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import guru.springframework.norris.chuck.ChuckNorrisQuotes;
 
 @Service
-public class GetJoke {
+public class GetJoke implements JokeService {
 
 	private ChuckNorrisQuotes chuckNorrisQuotes;
 	
@@ -13,7 +13,8 @@ public class GetJoke {
 		chuckNorrisQuotes = new ChuckNorrisQuotes();
 	}
 	
-	public String getQuote() {
+	@Override
+	public String getJoke() {
 		return chuckNorrisQuotes.getRandomQuote();
 	}
 	
