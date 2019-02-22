@@ -9,10 +9,10 @@ public class GetJoke implements JokeService {
 
 	private ChuckNorrisQuotes chuckNorrisQuotes;
 	
-	public GetJoke() {
-		chuckNorrisQuotes = new ChuckNorrisQuotes();
+	public GetJoke(ChuckNorrisQuotes chuckNorrisQuotes) {
+		this.chuckNorrisQuotes = chuckNorrisQuotes;
 	}
-	
+
 	@Override
 	public String getJoke() {
 		return chuckNorrisQuotes.getRandomQuote();
